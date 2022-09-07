@@ -2,6 +2,32 @@
 
 A simple Zsh plugin for sending notifications to other services.
 
+## Installation
+
+### oh-my-zsh
+
+```shell
+git clone https://github.com/rudeigerc/znotify ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/znotify
+```
+
+In `$HOME/.zshrc`:
+
+```shell
+plugins=(... znotify)
+```
+
+### Znap
+
+```shell
+znap source rudeigerc/znotify
+```
+
+### Manual Installation
+
+```shell
+source /path/to/znotify.plugin.zsh
+```
+
 ## Usage
 
 ```shell
@@ -23,7 +49,7 @@ $ do something; znotify -s <service>
 - [LINE](https://notify-bot.line.me/doc/en/)
   - `ZNOTIFY_LINE_TOKEN`: Authentication token
 - [Slack](https://api.slack.com/methods/chat.postMessage)
-  - `ZNOTIFY_SLACK_TOKEN`: Authentication token bearing required scopes.
+  - `ZNOTIFY_SLACK_TOKEN`: Authentication token bearing required scopes
   - `ZNOTIFY_SLACK_CHANNEL`: Channel, private group, or IM channel to send message to
 
 ## License
